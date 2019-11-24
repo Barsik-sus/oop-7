@@ -6,7 +6,8 @@ class admin :
 private:
 	std::string post; // должность
 public:
-	void set_info(std::string post, int, int);
+	admin(std::string post);
+	void set_post(std::string post);
 	void print_info();
 };
 

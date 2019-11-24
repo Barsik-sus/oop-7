@@ -6,7 +6,9 @@ class worker :
 	std::string specialty; // название специальности
 	int depart;			   // номер цеха
 public:
-	void set_info(std::string new_specialty, int new_depart, int);
+	worker(std::string specialty, int depart);
+	void set_specialty(std::string specialty);
+	void set_depart(int depart);
 	void print_info();
 };
 

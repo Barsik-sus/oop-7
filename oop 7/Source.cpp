@@ -7,26 +7,32 @@ using namespace std;
 
 int main()
 {
-	pers * First = new admin();
-	First->set_name("First");
-	First->print_name();
-	First->set_info("Boss");
-	First->print_info();
+	//создаём 4 объекта
+	engineer First(5, 6);
+	First.set_name("Sam");
 
-	pers* Second = new worker();
-	Second->set_name("Second");
-	Second->print_name();
-	Second->set_info("Some speciality", 5);
-	Second->print_info();
+	admin Second("Boss");
+	Second.set_name("Bob");
 
-	pers* Third = new engineer();
-	Third->set_name("Third");
-	Third->print_name();
-	Third->set_info("",5,6);
-	Third->print_info();
+	engineer Third(8, 2);
+	Third.set_name("Jo");
 
-	delete Third;
-	delete Second;
-	delete First;
+	worker Fourth("Some specialty", 3);
+	Fourth.set_name("Bony");
+	
+	//изменяем некоторые значения
+	Third.set_quality(9);
+	First.set_quality(8);
+
+	//массив объектов
+	pers* arrPers[4] = { &First, &Second, &Third, &Fourth };
+	
+	//вывод
+	for (int i = 0; i < 4; i++)
+	{
+		arrPers[i]->print_name();
+		arrPers[i]->print_info();
+		cout << endl;
+	}
 	return 0;
 }

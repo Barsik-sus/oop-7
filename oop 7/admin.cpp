@@ -1,7 +1,13 @@
 #include "admin.h"
 
 
-void admin::set_info(std::string new_post, int , int)
+admin::admin(std::string new_post)
+{
+	post = new_post;
+}
+
+
+void admin::set_post(std::string new_post)
 {
 	post = new_post;
 }

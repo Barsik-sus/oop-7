@@ -1,9 +1,21 @@
 #include "worker.h"
 
 
-void worker::set_info(std::string new_specialty, int new_depart, int)
+worker::worker(std::string new_specialty, int new_depart)
 {
 	specialty = new_specialty;
+	depart = new_depart;
+}
+
+
+void worker::set_specialty(std::string new_specialty)
+{
+	specialty = new_specialty;
+}
+
+
+void worker::set_depart(int new_depart)
+{
 	depart = new_depart;
 }
 

@@ -6,7 +6,9 @@ class engineer :
 	int quality;		  //квалификация
 	int subdivision;      //номер подразделения
 public:
-	void set_info(std::string, int quality, int subdivision);
+	engineer(int quality, int subdivision);
+	void set_quality(int quality);
+	void set_subdivision(int subdivision);
 	void print_info();
 };
 
