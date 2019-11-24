@@ -3,7 +3,10 @@
 class engineer :
 	public pers
 {
-	unsigned int quality; //квалификация
+	int quality;		  //квалификация
 	int subdivision;      //номер подразделения
+public:
+	void set_info(std::string, int quality, int subdivision);
+	void print_info();
 };
 
